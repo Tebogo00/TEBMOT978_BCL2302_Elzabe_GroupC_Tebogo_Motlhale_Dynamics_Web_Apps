@@ -9,33 +9,28 @@ form.addEventListener("submit", (event) => {
 
 
 
-//   //  an if statement checks if either dividend or divider variables are empty strings.
-//   if (dividend === "" || divider === "") {
-//     result.innerText = "Division not performed. Both values are required in inputs. Try again.";
-//   }
+ // if either dividend or divider variables are empty strings.
+   if (dividend === "" || divider === "") {
+     result.innerText = "Division not performed. Both values are required in inputs. Try again.";
+  }
 
 
-//   // if either dividend or divider variables is not a valid number using the isNaN function.
-//   if (isNaN(dividend) || isNaN(divider)) {
-//     console.error("Invalid number provided");
-//     console.trace("Call stack");
-//     result.innerText = "Division not performed. Invalid number provided. Try again.";
-//   }
+// if either dividend or divider variables is not a valid number using the isNaN function.
+   else if (isNaN(dividend) || isNaN(divider)) {
+     document.body.innerHTML = "Division not performed. Invalid number provided. Try again.";
+     console.error("Call stack");
+   }
 
-//   //  if the value of divider is equal to 0. If it is, it means that division by zero is being attempted
-//   if (divider < 0) {
-//     result.innerText = "Division not performed. Invalid number provided. Try again.";
-//     console.error("Division by zero");
-//     console.trace("Call stack");
-//     return;
-//   }
+//  if the value of divider is smaller than 0. 
+  else if (divider < 0) {
+    result.innerText = "Division not performed. Invalid number provided. Try again.";
+    console.error("Call stack");
+  }
 
 
-    
-if()
-
-  // the division operation is performed using the dividend and divider variables.
-  const quotient = dividend / divider;
-  result.innerText = Number.isInteger(quotient) ? quotient : Math.floor(quotient);
-});
-
+  // dividing numbers result in a decimal number
+  else{
+  const divisionResult = Math.floor(dividend / divider);
+  result.innerText = divisionResult
+  }
+})
