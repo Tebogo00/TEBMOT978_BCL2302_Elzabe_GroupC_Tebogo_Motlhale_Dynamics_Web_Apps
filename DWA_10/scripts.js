@@ -77,10 +77,6 @@ const resetHandler = () => {
     message.disabled = false
   };
 
-// const resetHandler = () => {
-//     number.value = 0;
-//     addButton.disabled = f
-// }
 
 subtractButton.addEventListener('click', subtractHandler);
 addButton.addEventListener('click', addHandler);
